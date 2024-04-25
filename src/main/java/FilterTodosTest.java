@@ -27,7 +27,7 @@ public class FilterTodosTest {
   public void filterTodos() throws InterruptedException {
     driver.get("https://todomvc.com/examples/react/dist/");
     driver.manage().window().setSize(new Dimension(550, 694));
-    Thread.sleep(500);
+    Thread.sleep(1000);
     driver.findElement(By.id("todo-input")).click();
     Thread.sleep(500);
     driver.findElement(By.id("todo-input")).sendKeys("example1");
@@ -41,8 +41,8 @@ public class FilterTodosTest {
     driver.findElement(By.cssSelector("li:nth-child(1) .toggle")).click();
     Thread.sleep(500);
     driver.findElement(By.linkText("Active")).click();
-    Thread.sleep(500);
+    Thread.sleep(1500);
     driver.findElement(By.linkText("Completed")).click();
-    Thread.sleep(2000);
+    Thread.sleep(1500);
   }
 }
