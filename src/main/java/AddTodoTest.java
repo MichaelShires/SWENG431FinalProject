@@ -3,8 +3,6 @@ import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.core.IsNot.not;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -28,11 +26,15 @@ public class AddTodoTest {
         //driver.quit();
     }
     @Test
-    public void addTodo() {
+    public void addTodo() throws InterruptedException {
         driver.get("https://todomvc.com/examples/react/dist/");
         driver.manage().window().setSize(new Dimension(550, 693));
+        Thread.sleep(500);
         driver.findElement(By.id("todo-input")).click();
+        Thread.sleep(500);
         driver.findElement(By.id("todo-input")).sendKeys("exampleToDo");
+        Thread.sleep(500);
         driver.findElement(By.id("todo-input")).sendKeys(Keys.ENTER);
+        Thread.sleep(500);
     }
 }
